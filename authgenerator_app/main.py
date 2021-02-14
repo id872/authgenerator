@@ -17,7 +17,7 @@ def write_config_file(file_name, content):
     if path.exists(file_path):
         remove(file_path)
 
-    with open(path.join(out_dir, file_name), 'w') as config_file:
+    with open(file_path, 'w') as config_file:
         config_file.write(content)
 
 
