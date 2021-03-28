@@ -15,6 +15,7 @@ class SqlAuthData:
         self.user_password_hash = get_bcrypt_hash(user_password).decode()
 
     def __str__(self):
-        return "INSERT INTO `users` (`user_name`, `user_password_hash`, `api_key`, `api_hash`)" \
-               "VALUES\n ('{}', '{}', '{}', '{}');" \
+        return "INSERT INTO `users` " \
+               "(`user_name`, `user_password_hash`, `api_key`, `api_hash`)\n" \
+               "VALUES ('{}', '{}', '{}', '{}');" \
             .format(self.username, self.user_password_hash, self.api_key, self.api_hash)

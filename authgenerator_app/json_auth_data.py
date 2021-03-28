@@ -11,4 +11,4 @@ class JsonAuthData:
         self.user_password = user_password
 
     def __str__(self):
-        return dumps(self.__dict__)
+        return dumps(self.__dict__, indent=4)
